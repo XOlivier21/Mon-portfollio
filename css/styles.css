@@ -1,0 +1,214 @@
+/* ================= VARIABLES GLOBALES (Couleurs de base) ================= */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#6ee7b7;
+  --accent-2:#60a5fa;
+  --text:#e6eef8;
+  --glass: rgba(255,255,255,0.03);
+  --max-width:1100px;
+}
+
+/* ================= STYLES DE BASE DE LA PAGE ================= */
+/* Le box-sizing permet de ne pas casser les tailles avec les marges (padding) */
+*{box-sizing:border-box}
+html,body{height:100%}
+
+/* Style général (Fond avec dégradé fixé, police de texte...) */
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #0d0b1a 100%);
+  background-attachment:fixed;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+/* Conteneur principal pour centrer le contenu et limiter sa largeur max */
+.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+
+/* ================= EN-TÊTE ET MENU (HEADER) ================= */
+/* sticky permet au menu de rester collé en haut quand on défile */
+.site-header{backdrop-filter:saturate(120%) blur(6px);position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{color:var(--text);font-weight:700;text-decoration:none}
+
+/* Liens de navigation du menu */
+.nav{display:block}
+.nav-list{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.nav-list a{color:var(--muted);text-decoration:none}
+.nav-list a:hover{color:var(--text)}
+
+/* ================= MENU MOBILE (HAMBURGER) ================= */
+/* Caché par défaut sur grand écran */
+.nav-toggle{display:none;background:none;border:0;color:inherit}
+.hamburger{width:28px;height:2px;background:var(--text);display:inline-block;position:relative}
+.hamburger::after,.hamburger::before{content:'';position:absolute;left:0;right:0;height:2px;background:var(--text)}
+.hamburger::before{top:-8px}
+.hamburger::after{bottom:-8px}
+
+/* ================= SECTION HERO (ACCUEIL) ================= */
+.hero{padding:3rem 0;min-height:85vh;display:flex;align-items:center}
+.hero-inner{width:100%;display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:center}
+.hero-text h1{font-size:2rem;margin:0}
+.lead{color:var(--muted);margin-top:0.5rem}
+
+/* Boutons généraux */
+.btn{display:inline-block;background:var(--accent);color:#042020;padding:0.6rem 1rem;border-radius:8px;text-decoration:none}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+/* Image de profil en haut */
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Boutons Github et LinkedIn */
+.presentation-links {
+  display: flex;
+  gap: 15px;
+  margin: 1.5rem 0;
+}
+
+/* Anciennes barres de progression de compétences (non utilisées actuellement mais gardées au cas où) */
+.skill-list{display:flex;gap:1rem;flex-wrap:wrap}
+.skill{flex:1;min-width:180px}
+.bar{background:rgba(255,255,255,0.03);height:12px;border-radius:999px;overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:var(--value)}
+
+/* ================= SECTION PROJETS ================= */
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{background:var(--card);padding:1rem;border-radius:8px}
+.project-thumb{height:140px;background:linear-gradient(135deg,rgba(255,255,255,0.02),rgba(0,0,0,0.05));border-radius:6px;margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* ================= CONTACT DANS LE "À PROPOS" ================= */
+.contact-list{list-style:none;padding:0;margin:0.5rem 0 0 0;color:var(--muted)}
+.contact-list li{margin-bottom:0.25rem}
+.contact-list a{color:var(--text);text-decoration:none}
+.contact-list a:hover{text-decoration:underline}
+
+.muted{color:var(--muted)}
+
+.job{background:transparent;padding:0.75rem 0;border-bottom:1px solid rgba(255,255,255,0.02)}
+
+.site-footer .footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+/* ================= CADRES PRINCIPAUX DES SECTIONS ================= */
+/* Ces règles donnent l'effet de "carte" avec un fond bleu-violet à tes grandes sections */
+.about.container,
+.skills.container,
+.projects.container,
+.education.container,
+.experience.container,
+.contact.container {
+  background: #2b2553;
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Barre lumineuse horizontale qui sépare tes sections */
+.section-separator {
+  border: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, var(--accent-2), transparent);
+  margin: 2rem auto;
+  width: 70%;
+  opacity: 0.8;
+}
+
+/* ================= FORMULAIRE DE CONTACT ================= */
+.contact p a{color:var(--text);text-decoration:none}
+.contact p a:hover{text-decoration:underline}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.contact-form label{grid-column:1 / -1}
+.contact-form input,.contact-form textarea{padding:0.75rem;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:rgba(0,0,0,0.15);color:var(--text)}
+.contact-form button{grid-column:1 / -1}
+
+/* Pied de page (Footer) */
+.site-footer{padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+/* ================= CARTES DE COMPÉTENCES ================= */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.skill-card{background:rgba(0,0,0,0.2);color:var(--text);border-radius:8px;padding:1rem 1.25rem;box-shadow:0 6px 18px rgba(0,0,0,0.15);min-height:200px}
+.skill-card ul{margin:0;padding:0 0 0 0.25rem;color:var(--text)}
+.skill-card li{margin:0.6rem 0;font-size:0.95rem}
+.skill-card hr{border:0;border-top:2px solid rgba(96,165,250,0.10);margin:0.75rem 0}
+.pill{display:inline-block;background:var(--accent-2);color:#042020;padding:0.4rem 0.9rem;border-radius:999px;font-weight:700;margin-bottom:0.5rem}
+
+/* Sur petit écran, on passe à 2 colonnes ou 1 colonne pour les compétences */
+@media (max-width:900px){
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  .skills-grid{grid-template-columns:1fr}
+}
+
+/* About section tabs layout */
+.about-grid{display:grid;grid-template-columns:240px 1fr;gap:2rem;align-items:start}
+.about-avatar{width:180px;height:auto;border-radius:50%;background:linear-gradient(135deg,#fff 0%, #ffeafb 100%);padding:10px}
+.tabs{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:0.45rem 0.9rem;border-radius:999px;color:var(--muted);cursor:pointer}
+.tab.active{background:var(--accent-2);color:#042020;border-color:var(--accent-2)}
+.tab:focus{outline:3px solid rgba(96,165,250,0.12)}
+.tab-panels{margin-top:0.75rem}
+.panel{display:none}
+.panel[aria-hidden="false"]{display:block}
+.panel-inner{background:var(--card);padding:1rem;border-radius:12px;color:var(--text)}
+.panel-inner h4{margin-top:0}
+.panel-inner ul{margin:0;padding-left:1rem}
+.lang-list li{display:flex;justify-content:space-between;background:rgba(255,255,255,0.6);padding:0.5rem;border-radius:6px;margin-bottom:0.5rem}
+
+@media (max-width:900px){
+  .about-grid{grid-template-columns:180px 1fr}
+}
+@media (max-width:700px){
+  .about-grid{grid-template-columns:1fr;gap:1rem}
+  .about-left{text-align:center}
+  .about-avatar{width:140px}
+}
+
+/* ================= FRISE CHRONOLOGIQUE (ÉTUDES ET EXPÉRIENCE) ================= */
+.timeline{position:relative;padding:2rem 0}
+.timeline-line{position:absolute;left:50%;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent-2),var(--accent));transform:translateX(-50%)}
+.timeline-item{position:relative;width:50%;padding:1rem 2rem}
+.timeline-item.left{left:0;text-align:right}
+.timeline-item.right{left:50%}
+.timeline-dot{width:18px;height:18px;background:var(--accent-2);border-radius:50%;position:absolute;top:1.25rem;right:-9px;box-shadow:0 4px 12px rgba(2,6,23,0.06)}
+.timeline-item.left .timeline-dot{left:-9px;right:auto}
+.timeline-content{background:var(--card);color:var(--text);padding:1rem;border-radius:8px;display:inline-block;min-width:220px}
+.timeline .time{display:block;color:var(--muted);font-size:0.9rem;margin-bottom:0.25rem}
+
+@media (max-width:900px){
+  .timeline-item{width:100%;left:0;padding-left:3.5rem;padding-right:1rem}
+  .timeline-line{left:2rem}
+  .timeline-item.left,.timeline-item.right{text-align:left}
+  .timeline-dot{left:0;right:auto}
+}
+
+/* ================= RESPONSIVE GLOBALE (POUR TÉLÉPHONE / TABLETTE) ================= */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr 220px}
+  .project-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  /* Cache le grand menu, affiche le bouton hamburger */
+  .nav-list{display:none}
+  .nav-toggle{display:inline-block}
+  
+  /* L'introduction passe sur une seule colonne */
+  .hero-inner{grid-template-columns:1fr;gap:1rem}
+  .hero-image{text-align:center}
+  .project-grid{grid-template-columns:1fr}
+  .contact-form{grid-template-columns:1fr}
+}
+
+/* Classe utilitaire pour cacher du texte visuellement (mais le laisser pour les lecteurs d'écran) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}

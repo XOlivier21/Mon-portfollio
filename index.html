@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ================= EN-TÊTE ET NAVIGATION ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Mon Portfolio</a>
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-navigation" class="nav">
+        <ul class="nav-list">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#education">Parcours</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= SECTION ACCUEIL (HERO) ================= -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Bonjour, je suis <span class="name">Olivier XU</span></h1>
+          <p class="lead">Étudiant en B1 informatique à Ynov Paris, passionné par l'infrastructure et le réseau. Futur DevOps ou Architecte Réseau.</p>
+          <p>
+            <a class="btn" href="#projects">Voir mes projets</a>
+            <a class="btn btn-outline" href="#contact">Me contacter</a>
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="assets/avatar.jpg" alt="Avatar" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Ligne de séparation lumineuse -->
+    <hr class="section-separator" />
+
+    <!-- ================= SECTION À PROPOS ================= -->
+    <section id="about" class="about container">
+      <h2>À Propos</h2>
+      <div class="about-grid">
+        <div class="about-left">
+          <img class="about-avatar" src="assets/avatar.jpg" alt="Avatar Olivier" />
+        </div>
+        <div class="about-right">
+          <!-- Boutons des onglets -->
+          <div class="tabs" role="tablist" aria-label="À propos sections">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1">Qui suis-je ?</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2">Soft skills</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3">Langues</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4">Passions</button>
+          </div>
+
+          <div class="tab-panels">
+            <!-- Contenu de l'onglet 1 : Qui suis-je ? -->
+            <div class="panel" id="panel-1" role="tabpanel" aria-hidden="false" aria-labelledby="tab-1">
+              <div class="panel-inner">
+                <p><strong>Hello, moi c’est Olivier ! 👋</strong></p>
+                <p>J’ai 18 ans et je suis en B1 informatique à Ynov Paris. L'info et moi, c'est une longue histoire : je vis dedans depuis que je suis tout petit. Ce qui n'était qu'un jeu au début est devenu une vraie passion qui m'occupe au quotidien.</p>
+                <p>Plutôt que de simplement utiliser les outils, j'ai toujours voulu comprendre comment ils sont construits. C’est pour ça que je me dirige naturellement vers le réseau : j'adore l'idée de maîtriser l'infrastructure qui permet à tout le reste de fonctionner.</p>
+                <p>Mon ambition ? Devenir DevOps ou Architecte Réseau. J'ai envie de concevoir des systèmes performants, de gérer l'automatisation et de bâtir des environnements ultra-solides sur lesquels on peut compter.</p>
+                <p>Je suis ultra motivé à l'idée d'apprendre chaque jour et de transformer cette passion de toujours en mon futur métier !</p>
+
+                <div class="presentation-links">
+                  <a href="https://github.com/XOlivier21" target="_blank" rel="noopener noreferrer" class="btn">Mon GitHub</a>
+                  <a href="https://www.linkedin.com/in/olivier-xu-7059b7210/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Mon LinkedIn</a>
+                </div>
+
+                <ul class="contact-list">
+                  <li>Téléphone : <a href="tel:+33698820644">06 98 82 06 44</a></li>
+                  <li>Email : <a href="mailto:olivierxu36@gmail.com">olivierxu36@gmail.com</a></li>
+                  <li>Adresse : 100 rue de la chapelle</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Contenu de l'onglet 2 : Soft skills -->
+            <div class="panel" id="panel-2" role="tabpanel" aria-hidden="true" aria-labelledby="tab-2">
+              <div class="panel-inner">
+                <h4>Mes qualités personnelles</h4>
+                <ul>
+                  <li>Créativité et sens artistique</li>
+                  <li>Autonomie & apprentissage actif</li>
+                  <li>Travail en équipe</li>
+                  <li>Curiosité et apprentissage continu</li>
+                  <li>Sens du service et relation client</li>
+                  <li>Rigueur et organisation</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Contenu de l'onglet 3 : Langues -->
+            <div class="panel" id="panel-3" role="tabpanel" aria-hidden="true" aria-labelledby="tab-3">
+              <div class="panel-inner">
+                <h4>Langues parlées</h4>
+                <ul class="lang-list">
+                  <li>Français — Natif</li>
+                  <li>Anglais — Avancé (C2)</li>
+                  <li>Chinois — B1</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Contenu de l'onglet 4 : Passions -->
+            <div class="panel" id="panel-4" role="tabpanel" aria-hidden="true" aria-labelledby="tab-4">
+              <div class="panel-inner">
+                <h4>Mes passions</h4>
+                <ul>
+                  <li>Lecture</li>
+                  <li>Cinéma</li>
+                  <li>Jeux vidéo</li>
+                  <li>Cuisine</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-separator" />
+
+    <!-- ================= SECTION COMPÉTENCES ================= -->
+    <section id="skills" class="skills container">
+      <h2>Mes Compétences</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="pill">Langages</div>
+          <hr />
+          <ul>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>Go</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="pill">Bases de Données</div>
+          <hr />
+          <ul>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="pill">Outils</div>
+          <hr />
+          <ul>
+            <li>Visual Studio Code</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Langues</h3>
+      <p>Français • Anglais • Chinois</p>
+    </section>
+
+    <hr class="section-separator" />
+
+    <!-- ================= SECTION PROJETS ================= -->
+    <section id="projects" class="projects container">
+      <h2>Projets</h2>
+      <p>Voici mes projets scolaires et personnels.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-thumb" style="font-size: 3rem;">🔴🟡</div>
+          <h3>Puissance 4</h3>
+          <p>Projet scolaire : développement du célèbre jeu Puissance 4.</p>
+          <br>
+          <p><a class="btn" href="https://github.com/XOlivier21/Puissance4" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a></p>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb" style="font-size: 3rem;">⚪⚫</div>
+          <h3>Jeu de Dames</h3>
+          <p>Projet scolaire : développement d'un jeu de dames classique.</p>
+          <br>
+          <p><a class="btn" href="https://github.com/PaulEnBon/jeux2dame" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a></p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="section-separator" />
+
+    <!-- ================= SECTION PARCOURS (ÉTUDES) ================= -->
+    <section id="education" class="education container">
+      <h2>Parcours</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="time">2022 - 2025</span>
+            <h4>Baccalauréat Général — Lycée Jules Ferry</h4>
+            <p>Spécialité Mathématiques & NSI</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="time">2025 - 2026</span>
+            <h4>Bachelor 1 Informatique — Ynov Campus Paris</h4>
+            <p>Parcours en informatique</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-separator" />
+
+    <!-- ================= SECTION EXPÉRIENCE ================= -->
+    <section id="experience" class="experience container">
+      <h2>Experience Professionnelle</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="time">2023</span>
+            <h4>Homme de ménage / Serveur (Hôtel)</h4>
+            <p>Maintenance des chambres, service en salle et gestion des demandes clients.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="time">Déc 2025 – Fév 2026</span>
+            <h4>Conseiller de vente — Monoprix (Textile)</h4>
+            <p>Accueil, analyse des besoins, logistique et optimisation du rayon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-separator" />
+
+    <!-- ================= SECTION CONTACT ================= -->
+    <section id="contact" class="contact container">
+      <h2>Me contacter</h2>
+      <p>Pour toute opportunité ou question : <a href="mailto:olivierxu36@gmail.com">olivierxu36@gmail.com</a> • <a href="tel:+33698820644">06 98 82 06 44</a></p>
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Nom</label>
+        <input id="name" name="name" type="text" placeholder="Votre nom" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="votre@mail.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Bonjour..." required></textarea>
+
+        <button class="btn" type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ================= PIED DE PAGE ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+  <p>© <span id="year"></span> Olivier XU — <a href="https://www.linkedin.com/in/olivier-xu-7059b7210/" target="_blank" rel="noopener noreferrer">LinkedIn</a> • <a href="https://github.com/XOlivier21" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- Lier le fichier JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
