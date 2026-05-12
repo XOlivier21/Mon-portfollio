@@ -74,11 +74,6 @@ body{
   margin: 1.5rem 0;
 }
 
-/* Anciennes barres de progression de compétences (non utilisées actuellement mais gardées au cas où) */
-.skill-list{display:flex;gap:1rem;flex-wrap:wrap}
-.skill{flex:1;min-width:180px}
-.bar{background:rgba(255,255,255,0.03);height:12px;border-radius:999px;overflow:hidden}
-.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:var(--value)}
 
 /* ================= SECTION PROJETS ================= */
 .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
@@ -98,7 +93,7 @@ body{
 .site-footer .footer-inner{display:flex;justify-content:space-between;align-items:center}
 
 /* ================= CADRES PRINCIPAUX DES SECTIONS ================= */
-/* Ces règles donnent l'effet de "carte" avec un fond bleu-violet à tes grandes sections */
+/* fond bleu-violet */
 .about.container,
 .skills.container,
 .projects.container,
@@ -114,7 +109,7 @@ body{
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
-/* Barre lumineuse horizontale qui sépare tes sections */
+/* Barre sections */
 .section-separator {
   border: 0;
   height: 3px;
@@ -132,7 +127,7 @@ body{
 .contact-form input,.contact-form textarea{padding:0.75rem;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:rgba(0,0,0,0.15);color:var(--text)}
 .contact-form button{grid-column:1 / -1}
 
-/* Pied de page (Footer) */
+/* Footer */
 .site-footer{padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
 
 /* ================= CARTES DE COMPÉTENCES ================= */
